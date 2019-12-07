@@ -1,16 +1,35 @@
 import React from "react";
 
 const Task = props => {
-  const { text, date, id } = props.task;
-  return (
-    <div>
-      <p>
-        <strong>{text}</strong> - do <span>{date} </span>
-        <button onClick={() => props.change(id)}>Done</button>
-        <button onClick={() => props.delete(id)}>x</button>
-      </p>
-    </div>
-  );
+  const style = {
+    color: "red"
+  };
+  const { text, date, id, active, important, endDate } = props.task;
+  if (active) {
+    return (
+      <div>
+        <p>
+          <strong style={important ? style : null}>{text}</strong> - till{" "}
+          <span>{date} </span>
+          <button onClick={() => props.change(id)}>Done</button>
+          <button onClick={() => props.delete(id)}>x</button>
+        </p>
+      </div>
+    );
+  } else {
+    const time = new Date(endDate).toLocaleString();
+
+    return (
+      <div>
+        <p>
+          <strong>{text}</strong>
+          <em> (done till {date}) </em>
+          <br />- task complete confirmation <span>{time} </span>
+          <button onClick={() => props.delete(id)}>x</button>
+        </p>
+      </div>
+    );
+  }
 };
 
 export default Task;
