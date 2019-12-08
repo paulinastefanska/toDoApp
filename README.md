@@ -7,7 +7,7 @@
 - HTML,
 - CSS,
 - JavaScript ES6,
-- React,
+- React / JSX,
 - yarn.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
