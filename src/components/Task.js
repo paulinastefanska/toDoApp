@@ -23,8 +23,8 @@ const Task = props => {
       <div>
         <p>
           <strong>{text}</strong>
-          <em> (done till {date}) </em>
-          <br />- task complete confirmation <span>{time} </span>
+          <em> (till {date}) </em>
+          <br />- task complete <span>{time} </span>
           <button onClick={() => props.delete(id)}>x</button>
         </p>
       </div>

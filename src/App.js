@@ -4,7 +4,7 @@ import TaskList from "./components/TaskList";
 import "./App.css";
 
 class App extends Component {
-  counter = 5;
+  counter = 6;
   state = {
     tasks: [
       {
@@ -44,6 +44,14 @@ class App extends Component {
         text: "go to work",
         date: "2020-01-02",
         important: true,
+        active: true,
+        endDate: null
+      },
+      {
+        id: 5,
+        text: "pay bills",
+        date: "2019-12-23",
+        important: false,
         active: true,
         endDate: null
       }
@@ -99,7 +107,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>ToDo App</h1>
+        <h1>ToDoApp</h1>
         <AddTask add={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
