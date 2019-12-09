@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./AddTask.css";
+import "./AddTask.scss";
 
 class AddTask extends Component {
   minDate = new Date().toISOString().slice(0, 10);

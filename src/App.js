@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
-import "./App.css";
+import "./App.scss";
 
 class App extends Component {
   counter = 6;
