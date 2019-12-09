@@ -1,18 +1,23 @@
 import React from "react";
+import "./Task.scss";
 
 const Task = props => {
   const style = {
-    color: "red"
+    color: "#ff7675"
   };
   const { text, date, id, active, important, endDate } = props.task;
   if (active) {
     return (
-      <div>
+      <div className="taskActive">
         <p>
-          <strong style={important ? style : null}>{text}</strong> - till{" "}
-          <span>{date} </span>
-          <button onClick={() => props.change(id)}>Done</button>
-          <button onClick={() => props.delete(id)}>x</button>
+          <strong style={important ? style : null}>{text}</strong> (till{" "}
+          <span>{date}) </span>
+          <button className="done" onClick={() => props.change(id)}>
+            Done
+          </button>
+          <button className="delete" onClick={() => props.delete(id)}>
+            x
+          </button>
         </p>
       </div>
     );
@@ -20,12 +25,16 @@ const Task = props => {
     const time = new Date(endDate).toLocaleString();
 
     return (
-      <div>
+      <div className="taskDone">
         <p>
           <strong>{text}</strong>
           <em> (till {date}) </em>
-          <br />- task complete <span>{time} </span>
-          <button onClick={() => props.delete(id)}>x</button>
+          <button className="delete" onClick={() => props.delete(id)}>
+            x
+          </button>
+          <span className="taskComplete">
+            task complete <span>{time} </span>
+          </span>
         </p>
       </div>
     );

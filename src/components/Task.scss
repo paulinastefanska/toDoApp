@@ -1,0 +1,43 @@
+.taskActive {
+  border-bottom: 1px solid #eeeeee;
+  .delete,
+  .done {
+    margin: 0 6px;
+    padding: 5px 10px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    &:hover {
+      transform: scale(1.2);
+      background-color: #ff7675;
+      color: #fff;
+    }
+  }
+}
+.taskDone {
+  font-size: 15px;
+  .delete {
+    margin: 0 6px;
+    padding: 5px 10px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    &:hover {
+      transform: scale(1.2);
+      background-color: #ff7675;
+      color: #fff;
+    }
+  }
+  .taskComplete {
+    font-size: 12px;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .taskActive {
+    font-size: 14px;
+  }
+}

@@ -47,30 +47,32 @@ class AddTask extends Component {
     return (
       <div className="form">
         <input
+          className="inputText"
           type="text"
-          placeholder="add task"
+          placeholder="write task..."
           value={this.state.text}
           onChange={this.handleText}
         />
+        <label htmlFor="important" className="container">
+          Important
+          <input
+            className="checkbox"
+            type="checkbox"
+            checked={this.state.checked}
+            id="important"
+            onChange={this.handleCheckbox}
+          />
+          <span className="checkmark"></span>
+        </label>
         <input
-          type="checkbox"
-          checked={this.state.checked}
-          id="important"
-          onChange={this.handleCheckbox}
-        />
-        <label htmlFor="important">Important</label>
-        <br />
-        <label htmlFor="date">When to do </label>
-        <input
+          className="inputText"
           type="date"
           value={this.state.date}
           min={this.minDate}
           max={maxDate}
           onChange={this.handleDate}
         />
-        <br />
         <button onClick={this.handleClick}>Add</button>
-        <hr />
       </div>
     );
   }
