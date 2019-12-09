@@ -40,4 +40,11 @@
   .taskActive {
     font-size: 14px;
   }
+  .taskActive .done:hover,
+  .taskActive .delete:hover,
+  .taskDone .delete:hover {
+    transform: none;
+    background-color: #eeeeee;
+    color: #2e2e2e;
+  }
 }
