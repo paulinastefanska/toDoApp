@@ -4,11 +4,10 @@
 
 ## Tech stack
 
-- HTML,
-- CSS,
+- HTML, SASS, RWD,
 - JavaScript ES6,
 - React / JSX,
-- yarn.
+- Yarn / NPM.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
