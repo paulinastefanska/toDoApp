@@ -1,6 +1,6 @@
 # ToDo App
 
-## See [DEMO](https://paulinastefanska.github.io/toDoApp)
+### See [DEMO](https://paulinastefanska.github.io/toDoApp)
 
 ### Create-React-App exercise
 
