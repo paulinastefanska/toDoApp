@@ -1,13 +1,18 @@
 .App {
   text-align: center;
   min-width: 550px;
+  height: 670px;
+  overflow-y: scroll;
   margin: 0 auto;
+  padding: 10px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 @media (max-width: 767px) {
   .App {
+    overflow-y: visible;
+    min-height: 100%;
     min-width: 100vw;
     h1,
     h3,
@@ -15,4 +20,18 @@
       color: #ff7675;
     }
   }
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: #e4e3e3;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 3px;
+  background-color: #e4e3e3;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #ccc;
 }
